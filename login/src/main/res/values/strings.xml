@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">login</string>
+    <string name="title_activity_register">注册</string>
+    <string name="login">登录</string>
+    <string name="user_name">用户名</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_user_name">请输入用户名</string>
+    <string name="please_password">请输入密码</string>
+    <string name="register">注册</string>
+    <string name="please_sure_password">请确认密码</string>
+    <string name="cancel">取消</string>
+</resources>

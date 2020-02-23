@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially"><!--各动画按定义的顺序依次播放-->
+
+    <objectAnimator
+        android:propertyName="rotation"
+        android:duration="1000"
+        android:valueFrom="0f"
+        android:valueTo="180f"
+        android:repeatCount="10"
+        android:repeatMode="restart"/>
+
+    <!--横缩放和纵缩放同时进行-->
+    <set android:ordering="together">
+        <objectAnimator
+            android:propertyName="scaleX"
+            android:duration="1000"
+            android:valueFrom="0.5f"
+            android:valueTo="1.5f"
+            />
+        <objectAnimator
+            android:propertyName="scaleY"
+            android:duration="1000"
+            android:valueFrom="0.5f"
+            android:valueTo="1.5f"
+            />
+    </set>
+</set>
