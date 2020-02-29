@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.lsc.recyclerview.fragment.ComplexFragment;
 import com.lsc.recyclerview.fragment.EasyItemFragment;
+import com.lsc.recyclerview.fragment.MultiItemFragment;
 
 /*
 * RecyclerView只负责显示子控件，排列其子控件，滚动其子控件
@@ -20,10 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mBtnEasyItem;
     private Button mBtnComplex;
+    private Button mBtnMulti;
     private FragmentManager mManager;
 
     private EasyItemFragment mEasyItemFrag;
     private ComplexFragment mComplexFragment;
+    private MultiItemFragment mMultiFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView(){
         mBtnEasyItem = findViewById(R.id.btn_one);
         mBtnComplex = findViewById(R.id.btn_two);
+        mBtnMulti = findViewById(R.id.btn_three);
 
         mBtnEasyItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,5 +66,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mBtnMulti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mMultiFragment == null){
+                    mMultiFragment = new MultiItemFragment();
+                }
+                mManager.beginTransaction().replace(R.id.framelayout,mMultiFragment).commit();
+            }
+        });
     }
 }

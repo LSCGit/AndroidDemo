@@ -1,2 +1,2 @@
-include ':app', ':hook', ':utils', ':login', ':animation', ':diyview', ':recyclerview'
+include ':app', ':hook', ':utils', ':login', ':animation', ':diyview', ':recyclerview', ':qq', ':recyclerlisttreeview'
 rootProject.name='AndroidDemo'

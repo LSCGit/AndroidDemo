@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lsc.recyclerview.R;
 
@@ -55,8 +56,22 @@ public class ComplexFragment extends Fragment {
 
     private class MyViewHolder extends RecyclerView.ViewHolder{
 
+        TextView singer;
+        TextView title;
+        RatingBar ratingBar;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            singer = itemView.findViewById(R.id.text_view_singer);
+            title = itemView.findViewById(R.id.textView_Title);
+            ratingBar = itemView.findViewById(R.id.ratingBar);
+
+            //让行的根View形影点击事件来实现选择item的效果
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getContext(),"Position: " + getAdapterPosition(),Toast.LENGTH_LONG).show();
+                }
+            });
         }
     }
 
@@ -69,6 +84,7 @@ public class ComplexFragment extends Fragment {
 
             LayoutInflater inflater = getLayoutInflater();
             View view = inflater.inflate(R.layout.complex_item,parent,false);
+
             MyViewHolder viewHolder = new MyViewHolder(view);
             return viewHolder;
         }
@@ -77,18 +93,12 @@ public class ComplexFragment extends Fragment {
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-            //获取要绑定数据的item控件
-            View view = holder.itemView;
-            //获取行中显示各种数据控件
-            TextView singer = view.findViewById(R.id.text_view_singer);
-            TextView title = view.findViewById(R.id.textView_Title);
-            RatingBar ratingBar = view.findViewById(R.id.ratingBar);
             //获取这一行对应的List项
             ComplexInfo info = infos.get(position);
             //将数据设置到对应的控件中
-            singer.setText(info.getSinger());
-            title.setText(info.getTitle());
-            ratingBar.setRating(info.like);
+            holder.singer.setText(info.getSinger());
+            holder.title.setText(info.getTitle());
+            holder.ratingBar.setRating(info.like);
         }
 
         //行数
