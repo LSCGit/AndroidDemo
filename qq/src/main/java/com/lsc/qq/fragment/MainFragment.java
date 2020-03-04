@@ -6,6 +6,8 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -28,7 +30,9 @@ import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.lsc.qq.R;
+import com.lsc.qq.adapter.ContactsPageListAdapter;
 import com.lsc.qq.adapter.MessagePageListAdapter;
+import com.lsc.recyclerlisttreeview.ListTree;
 import com.lsc.utils.DpPx;
 
 import java.util.ArrayList;
@@ -52,7 +56,6 @@ public class MainFragment extends Fragment {
     private View[] listViews = new View[3];
 
     private RecyclerView messageRecyclerView;
-    private View contactsView;
     public MainFragment() {
         // Required empty public constructor
 
@@ -66,15 +69,11 @@ public class MainFragment extends Fragment {
         messageRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         messageRecyclerView.setAdapter(new MessagePageListAdapter(getActivity()));
         listViews[0] = messageRecyclerView;
-        contactsView = getLayoutInflater().inflate(R.layout.contacts_page_layout,null);
-        listViews[1] = contactsView;
-        RecyclerView recyclerView = contactsView.findViewById(R.id.contactRV);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new MessagePageListAdapter(getActivity()));
+        listViews[1] = createContactsPage();
         listViews[2] = new RecyclerView(getContext());
 
     }
-          
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -296,5 +295,57 @@ public class MainFragment extends Fragment {
             }
             return null;
         }
+    }
+
+    /**
+     * 创建并初始化联系人页面，返回这个页面
+     * @return
+     */
+    private View createContactsPage(){
+        //创建View
+        View view = getLayoutInflater().inflate(R.layout.contacts_page_layout,null);
+        //创建集合 一棵树
+        ListTree tree = new ListTree();
+        //向树中添加节点
+        //创建组们，组是树的根节点，他们的父节点为null
+        ContactsPageListAdapter.GroupInfo groupInfo1 = new ContactsPageListAdapter.GroupInfo("特别关心",0);
+        ContactsPageListAdapter.GroupInfo groupInfo2 = new ContactsPageListAdapter.GroupInfo("我的好友",1);
+        ContactsPageListAdapter.GroupInfo groupInfo3 = new ContactsPageListAdapter.GroupInfo("朋友",0);
+        ContactsPageListAdapter.GroupInfo groupInfo4 = new ContactsPageListAdapter.GroupInfo("家人",0);
+        ContactsPageListAdapter.GroupInfo groupInfo5 = new ContactsPageListAdapter.GroupInfo("同学",0);
+
+        ListTree.TreeNode groupNodel1 = tree.addNode(null,groupInfo1,
+                R.layout.contacts_group_item);
+        ListTree.TreeNode groupNodel2 = tree.addNode(null,groupInfo2,
+                R.layout.contacts_group_item);
+        ListTree.TreeNode groupNodel3 = tree.addNode(null,groupInfo3,
+                R.layout.contacts_group_item);
+        ListTree.TreeNode groupNodel4 = tree.addNode(null,groupInfo4,
+                R.layout.contacts_group_item);
+        ListTree.TreeNode groupNodel5 = tree.addNode(null,groupInfo5,
+                R.layout.contacts_group_item);
+
+        //第二层 ，联系人信息
+        //头像
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
+                R.drawable.search_bk);
+        //联系人1
+        ContactsPageListAdapter.ContactInfo contactInfo1 = new ContactsPageListAdapter.ContactInfo(
+                bitmap,"王二","[在线]我是王二"
+        );
+
+        //联系人2
+        ContactsPageListAdapter.ContactInfo contactInfo2 = new ContactsPageListAdapter.ContactInfo(
+                bitmap,"王二三","[离线]我没有状态"
+        );
+
+        tree.addNode(groupNodel2,contactInfo1,R.layout.contacts_contact_item);
+        tree.addNode(groupNodel2,contactInfo2,R.layout.contacts_contact_item);
+
+        //获取页面里的RecyclerView,为他创建Adapter；
+        RecyclerView recyclerView = view.findViewById(R.id.contactRV);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(new ContactsPageListAdapter(tree));
+        return view;
     }
 }
