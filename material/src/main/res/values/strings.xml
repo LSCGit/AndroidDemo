@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">material</string>
+    <string name="page_title">Page Title</string>
+    <string name="favorite">favorite</string>
+    <string name="search">search</string>
+    <string name="more">more</string>
+    <string name="content_description_favorite">content description favorite</string>
+    <string name="app_bar">应用栏</string>
+    <string name="title">Title</string>
+    <string name="secondary_text">Secondary text</string>
+    <string name="supporting_text">supporting text</string>
+    <string name="action_1">Action1</string>
+    <string name="action_2">Action2</string>
+    <string name="hello_world">hello world</string>
+    <string name="news">娱乐新闻</string>
+    <string name="action_chip">actionChip</string>
+    <string name="label">label</string>
+</resources>

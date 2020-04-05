@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".button.ButtonActivity">
+
+    <Button
+        android:id="@+id/textButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Text button"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        />
+
+    <Button
+        android:id="@+id/textButtonIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Text button"
+        app:icon="@drawable/ic_add_black_24dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        />
+
+    <Button
+        android:id="@+id/outlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outlined button"
+        android:layout_gravity="center_horizontal"
+        app:icon="@drawable/ic_add_black_24dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        />
+
+
+    <Button
+        android:id="@+id/containedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Contained button"
+        />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 1"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 2"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 3"
+            style="?attr/materialButtonOutlinedStyle"
+            />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_notifications_black_24dp"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_remove_red_eye_black_24dp"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            />
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_favorite_black_24dp"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+</LinearLayout>

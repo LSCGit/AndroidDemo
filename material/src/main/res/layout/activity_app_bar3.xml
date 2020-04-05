@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appbar.AppBarActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fitsSystemWindows="true"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="152dp"
+            android:fitsSystemWindows="true"
+            >
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:expandedTitleMarginStart="72dp"
+                app:expandedTitleMarginBottom="28dp"
+                app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
+
+                android:fitsSystemWindows="true"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_cloud_download_black_24dp"
+                    android:scaleType="centerCrop"
+                    android:fitsSystemWindows="true"
+                    />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/app_bar"
+                app:menu="@menu/top_app_bar"
+                app:navigationIcon="@drawable/ic_dehaze_black_24dp"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:elevation="0dp"
+
+                android:background="@android:color/transparent"
+                />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <!-- This is the Header -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#888888"
+                    android:gravity="center"
+                    android:text="Header"
+                    android:textColor="#0000FF"
+                    android:textSize="30sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc"
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp" />
+
+                <!-- This is the Footer -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#888888"
+                    android:gravity="center"
+                    android:text="Footer"
+                    android:textColor="#FF0000"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

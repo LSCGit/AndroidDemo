@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tablayout.TabLayoutActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        app:tabMode="scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="体重"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="脂肪量"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="体脂率"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="肌肉"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="水分"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="骨质"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs2"
+        style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        app:tabMode="scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="体重"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="脂肪量"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="体脂率"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="肌肉"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="水分"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="骨质"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs3"
+        style="@style/Widget.Design.TabLayout"
+        app:tabMode="scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="体重"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="脂肪量"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="体脂率"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="肌肉"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="水分"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:text="骨质"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>
