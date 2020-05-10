@@ -1,2 +1,6 @@
-include ':app', ':hook', ':utils', ':login', ':animation', ':diyview', ':recyclerview', ':qq', ':recyclerlisttreeview', ':network', ':thread', ':encryption', ':server', ':svg', ':material'
+include ':app', ':hook', ':utils', ':login', ':animation', ':diyview', ':recyclerview', ':qq', ':recyclerlisttreeview', ':network', ':thread', ':encryption', ':server', ':svg', ':material', ':jetpack', ':kotlin', ':appshortcuts', ':downloadablefonts', ':notification', ':pictureinpicture', ':runtimepermission', ':designpattern', ':volley'
 rootProject.name='AndroidDemo'
+include ':databinding'
+include ':sunflower'
+include ':fragment'
+include ':ui'

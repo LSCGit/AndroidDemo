@@ -1,0 +1,14 @@
+工厂方法模式
+
+    Human 抽象产品类 负责定义产品的共性
+    AbstractHumanFactory 抽象工厂
+    HumanFactory 具体的实现工厂。
+
+    通用代码
+        Product  抽象产品类
+        ConcreteCreator1 2  具体产品类
+
+        Creator 抽象工厂类
+        ConcreteCreator 具体工厂类
+
+        Client 场景类

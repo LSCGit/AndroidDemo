@@ -1,0 +1,3 @@
+单一职责原则。
+IPhone -- > IConnectionManger
+       -- > IDataTransfer

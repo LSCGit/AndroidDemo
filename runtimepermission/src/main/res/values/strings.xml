@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">运行时权限</string>
+    <string name="intro_message">
+        <![CDATA[
+            此示例显示了Android M及以上版本中可用的运行时权限。在屏幕上显示日志以跟踪执行。如果在Android M设备上执行，将显示访问联系人的附加选项这是声明与可选的，M和以上只有权限。
+        ]]>
+    </string>
+    <string name="ok">OK</string>
+    <string name="contacts_string">Total number of contacts: %1$,d\nFirst contact:<b>%2$s</b></string>
+    <string name="contacts_none">No contacts stored on device.</string>
+    <string name="contacts_empty">Contacts not loaded.</string>
+    <string name="add_contact">Add a contact</string>
+    <string name="show_contact">Show first contact</string>
+    <string name="contacts_intro">This fragment demonstrates access to the contact database on the device.\n
+            Clicking \"Add a contact\" adds a new contact named "__DUMMY ENTRY" directly into the database.\n
+    Clicking \"Show first contact\" accesses the contact database to display the name of the first contact.</string>
+    <string name="camera_unavailable"><b>Camera could not be opened.</b>\nThis occurs when the camera is not available (for example it is already in use) or if the system has denied access (for example when camera access has been disabled).</string>
+    <string name="back">Back</string>
+    <string name="show_camera">使用摄像头</string>
+    <string name="show_contacts">显示并添加联系人</string>
+    <string name="main_introduction">点击下面的按钮，以显示相机预览或访问联系人数据库。注意，contacts选项仅在Android M上可用，以说明如何使用在较低SDK平台上不要求的可选M权限。</string>
+    <string name="permision_available_camera">Camera Permission has been granted. Preview can now be opened.</string>
+    <string name="permision_available_contacts">Contacts Permissions have been granted. Contacts screen can now be opened.</string>
+    <string name="permissions_not_granted">Permissions were not granted.</string>
+    <string name="permission_camera_rationale">Camera permission is needed to show the camera preview.</string>
+    <string name="permission_contacts_rationale">Contacts permissions are needed to demonstrate access.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

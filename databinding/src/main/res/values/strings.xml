@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">数据绑定</string>
+    <string name="likes">喜欢</string>
+    <string name="textview">TextView</string>
+    <string name="profile_name">NAME</string>
+    <string name="profile_lastname">LAST NAME</string>
+    <string name="last_name_label">Last name</string>
+    <string name="name_label">Name</string>
+    <string name="profile_avatar_cd">Profile\'s avatar</string>
+    <string name="like">Like</string>
+    <string name="observable_fields_activity_text">可观察的activity</string>
+    <string name="viewmodel_activity_text">ViewModel activity</string>
+    <string name="observableactivity_activity_label_text">使用ObservableFields自动刷新UI，并展示常见的错误做法</string>
+    <string name="viewmodel_activity_label_text">使用ViewModel来保存数据和处理用户操作，使用更好的替代方法</string>
+    <string name="see_readme">See README.md for details</string>
+</resources>
